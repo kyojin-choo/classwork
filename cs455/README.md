@@ -5,6 +5,4 @@
 - HW4:  Big Numbers (Factorial related to 52-card deck)
 - HW5:  Sound Manipulation: Sped up .wav file.
 - HW6:  Timing:
-- proj: Multiple Precision on z = exp(sin(50.0*x)) + sin(60.0*exp(y)) +
-                                  sin(70.0*sin(x)) + sin(sin(80.0*y)) -
-                                  sin(20.0*(x+y)) + (x*x+y*y)/4.0
+- proj: Multiple Precision (Roundoff Error: 1.0E-100)
