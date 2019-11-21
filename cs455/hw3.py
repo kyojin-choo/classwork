@@ -115,8 +115,7 @@ def menu(x):
 
 def main():
 	""" main(): bootstrapper
-
-	    Return: N/A. Exits on condition
+ 	    Return: N/A. Exits on condition
 	"""
 	usr_input = 0
 
