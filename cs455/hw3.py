@@ -9,14 +9,21 @@ import numpy as np
 from gauleg import gaulegf as gl
  
 def c1(x,y):
-	""" c1():  circle 1; this is the 
-	"""
+    """ c1(x,y): circle 1
+        Return:  pos on curve
+    """
 	return ((x-2)**2 + (y-2)**2)
 
 def c2(x,y):
+    """ c2(x,y): circle 2
+        Return:  pos on curve
+    """
 	return x**2 + (y-2)**2 
 
 def c3(x,y):
+	""" c3(x,y): circle 3
+        Return: pos on curve
+    """
 	return x**2 + y**2
 
 def q2():
@@ -41,7 +48,6 @@ def q2():
 			while y <= 4:
 				if (c1(x,y) >= 1.0**2.0) and (c2(x,y) <= 2.0**2.0) and (c3(x,y) <= 3.0**2.0):
 					points+=1
-					
 				y+=grid[i]
 				# End of y
 			x+=grid[i]
@@ -101,8 +107,7 @@ def q1a():
 
 def menu(x):
 	"""menu():  menu
-
-    Return:   x (int: user input)
+       Return:  x (int: user input)
 	"""
 	while x <= 0 or x > 4:
 		x = int(input("\nPlease select an option:\n1.) Q.1A\n2.) Q.1B\n3.) Q.2\n4.) Exit\n\nInput: "))
