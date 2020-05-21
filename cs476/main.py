@@ -39,9 +39,9 @@ def main():
         while True:
             # Validating user input
             while True:
-                usr_input = int(input("\n1. Scrape all files\n2. Calculate Weight Terms.\n3. Fixed File Lengths\n4. Exit\n\nProvide input: "))
-                try: 
-                    if usr_input in range(1, 5):
+                usr_input = int(input("\n1. Scrape all files\n2. Calculate Weight Terms.\n3. Fixed File Lengths\n4. Perform Clustering on Documents\n5. Exit\n\nProvide input: "))
+                try:
+                    if usr_input in range(1, 6):
                         break
                 except ValueError:
                     print("\nThat was an invalid input.")
@@ -68,7 +68,11 @@ def main():
                     look.indexing(freq)
 
             elif usr_input == 4:
+                look.cluster_strapper()
+
+            elif usr_input == 5:
                 print("\nBye!")
+                sys.exit(0)
 
     # Will go here if there are arguments (search queries.) (phase 4)
     else:
@@ -113,10 +117,10 @@ def main():
                 else:
                     print("Bye!")
                     sys.exit(0)
-            
+
             except Exception:
                 print("That was an incorrect input. Please put in ")
-        
+
     sys.exit(0)
 
 main()

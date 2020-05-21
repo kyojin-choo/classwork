@@ -1,0 +1,32 @@
+<img alt="CMU Robotics Institute" align=middle src="ri.gif">
+<ADDRESS>Eric Krotkov </ADDRESS>
+<HR><H2>Table of Contents</H2>
+
+<UL>
+<A HREF="epkMatl.html#HDR0"><B>Step and Feel</B></A>
+<BR>
+
+<A HREF="epkMatl.html#HDR1"><B>Hit and Listen</B></A>
+<BR>
+
+<A HREF="epkMatl.html#HDR2"><B>Whack and Watch</B></A>
+<A HREF="epkMatl.html#HDT3"><B>Perception of Material Properties</B></A>
+</UL>
+
+
+<HR><!-- This file was created with the fm2html filter.The filter is copyright Norwegian Telecom Research and was programmed by Jon Stephenson von Tetzchner.  -->The perception of material properties is a field in its early infancy. Although young, the field is important, because the new capability to perceive material properties will expand robotic horizons by enabling robots to perform tasks that are currently infeasible. Such tasks include robotic grasping of slippery objects, handling hazardous waste, recycling garbage, robotic excavation, non-destructive evaluation, and mobility in natural terrain.<p>
+In preliminary work, we have begun to define the field by developing the robotic capability to distinguish a wide variety of materials. We disambiguate different materials by actively contacting and probing them, and by sensing the resulting forces, displacements, and sounds. Here, we report on three of our preliminary investigations: step and feel, hit and listen, whack and watch.<p>
+<H2><A NAME="HDR0">Step and Feel</A></H2>
+The objective was to identify the compliance of natural terrain. In this work, a robot leg (instrumented with a six-axis force-torque sensor) stepped on different terrains: sand, sawdust, and soil. We measured the applied normal force <I>f</I> and the vertical displacement <I>z</I> while stepping on the materials <p>
+The observed vertical force-displacement response differed dramatically for the three materials tested, demonstrating that the samples can be discriminated without great difficulty.<p>
+<H2><A NAME="HDR1">Hit and Listen</A></H2>
+The objective was to classify objects from the sounds they made when struck. In this work, we hit a variety of objects by dropping a blind person's cane from fixed heights, and listened to the sounds of impact with a microphone. The objects included a wooden block, a concrete brick, a clay brick, a zinc ingot, and a ceramic tile.<p>
+We digitized the microphone signal and extracted spike features from its power spectrum. Based on these features, we classified the test object as one of the five objects with a hybrid minimum-distance and decision-tree classifier. The classifier achieved 97 percent accuracy on 580 training samples, and 94 percent accuracy on 240 test samples.<p>
+<H2><A NAME="HDR2">Whack and Watch</A></H2>
+The objective was to estimate the mass and friction properties of an unknown object. In this work, we struck a variety of objects with a home-made wooden pendulum, and observed their trajectories with a camera. We used the pendulum because its dynamics were simple enough to permit advance calculation of the instantaneous force, eliminating the need for force sensing. <p>
+We acquired a sequence of images (see figure) of the pendulum making contact and of the object sliding. For each image, we employed basic blob-finding techniques to determine the position of the struck object. From the sequence of positions we derived the velocity and acceleration of the object. <p>
+<A HREF="epkMatl.figure.id.1.gif"><img src="epkMatl.figure.id.1.gif"></A><p>
+From the expected forces and the estimated accelerations, we computed the mass of the object using Newton's second law, and computed the coefficient of sliding friction using the equation of motion under constant acceleration. The computed masses were within a factor of two of the true masses, and the coefficients of friction were within 25 percent of the true values.<p>
+<TITLE>Perception of Material Properties</TITLE>
+<H1><A NAME="HDT3">Perception of Material Properties</A></H1>
+<A NAME="ENDFILE"><PRE> </PRE></A>

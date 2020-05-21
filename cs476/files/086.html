@@ -1,0 +1,79 @@
+<HTML>
+<HEAD>
+<TITLE>Cimtas AS - Optimising reach and off-line programming in an arc welding workcell</TITLE> 
+</HEAD>
+<BODY background="paper3.gif">
+<H1>Cimtas AS - Optimising reach and off-line programming in an arc welding workcell</H1> 
+
+<H2>Workspace user profile</H2>
+
+<P>Cimtas are a Turkish company involved in the construction industry. They specialise in the fabrication and installation of heavy steel structures, cranes and pressure vessels. They manufacture in the region of 24,000 tonnes of steel structures per year and have over 1800 employees.</P>
+
+<H2>The challenge</H2>
+
+<P>Cimtas arc weld large I-beams on their production line and have recently purchased both Fanuc Arcmate and REIS SRV12L robots to form part of their manufacturing system.</P>
+
+fig.1
+
+fig.2
+
+<P>The I-beams are placed on a rotating table mechanism (D) which may be positioned manually along a linear track (C). by an operator (See fig.1). Once the beam is in place, the rotating overhead mechanism (A) swings the robot across into the appropriate position to start welding. Height of the robot above the floor may be adjusted manually at B.</P>
+
+<P>Before using Workspace, the robot program was generated entirely by using the teach pendant on the shop floor. Since 9 axes are used, it can be difficult for the operator to visualise all possible configurations. Due to the size of the I-beams, Cimtas have encountered many problems in getting the robots to achieve satisfactory welds without exceeding a robot joint limit or having the welding tool collide with the workpiece. It is possible to move the robot up and down along the vertical track B, but only by unbolting it and winching it into position. This makes it difficult to experiment with different heights above the floor.</P>
+
+<H2>Project aims</H2>
+<P>To experiment with different robot and table configurations to maximise the work envelope.</P>
+
+<P>To minimise the possibility of a collision when the robot re-orients itself during its task.</P>
+
+<P>To improve safety for the human operator.</P>
+
+<P>To reduce the need for teach pendant programming.</P>
+
+<P>To optimise the robot program and reduce cycle time.</P>
+
+<H2>The solution</H2>
+<P>A model of the workcell was created with Workspace and the SRV12L and Arcmate were compared for reachability. The Workspace facility to plot the working envelope was used to position the work piece optimally. It was immediately found that in this application, the Reis SRV12L robot allowed a greater working envelope, so this robot was chosen in place of the Arcmate for the workcell.</P>
+
+<P>By using Workspace it was possible to make the vertical track B a translational joint on the rotating column A. This allowed the height of the robot to be optimised by simply changing a variable in the simulation. Work then began on developing a set of teach points which the robot could follow without hitting a joint limit or colliding with the workpiece.</P>
+
+<P>It was found that repositioning the column A between welds enabled several particularly difficult moves to be achieved. Previously, Cimtas had simply placed the mechanism so that it was at right angles to the linear track C for the duration of the cycle.</P>
+
+<P>Collisions tended to arise if the robot was forced to reorient the wrist during a linear move along a welding seam. The simulation highlights any collisions and allows the user to abandon a move and immediately try another approach.</P>
+
+<H2>Cimtas' financial justification for Workspace</H2>
+
+<P>A complete set of teach points to perform the task was generated. These teach points were later used directly in a new program generated on Cimtas' text-based off line programming system.</P>
+
+<P>Time to develop the new program was reduced by over 40%.</P>
+
+<P>Development of the new program was achieved off-line while the robot was operating.</P>
+
+<P>A technical decision was made to use only Reis robots for the larger workpieces in Cimtas's manufacturing workcell.</P>
+
+<P>The risk of damage to personnel and equipment was eliminated.</P>
+
+1993 Robot Simulations Ltd.
+C.G.Ariss
+
+<center><IMG SRC="line_col.gif" ALT="[IMAGE]"></img></center>
+
+
+<P ALIGN=center><A HREF="index.htm"><IMG SRC="gif/home.gif" ALT="[IMAGE]"></a>[ <A HREF="index.htm">Return to Home Page</A> ]</P> 
+
+<center><IMG SRC="line_col.gif" ALT="[IMAGE]"></img></center>
+
+
+<center><h6><b>Workspace</b> and <b>Robotrak</b> are registered trademarks of Robot Simulations Ltd.</h6>
+
+<h6>Copyright &copy; 1996 Robot Simulations Ltd</h6>
+<h6>Last revision 3 April 1996</h6></center>
+</P>
+
+
+ 
+
+</BODY>
+
+</HTML>
+

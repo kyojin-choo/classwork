@@ -1,0 +1,917 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Untitled</TITLE>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.0Gold (Win95; I) [Netscape]">
+</HEAD>
+<BODY BACKGROUND="blue_paper.gif">
+
+<CENTER><P><B>PCMDI Report No. 38</B></P></CENTER>
+
+<CENTER><P><FONT SIZE=+1>Climatology of East Asian Winter Monsoon and Cold
+Surges:<BR>
+Results from the 1979-1995 NCEP/NCAR Reanalysis </FONT></P></CENTER>
+
+<CENTER><P>Yi Zhang, Kenneth R. Sperber and James S. Boyle</P></CENTER>
+
+<CENTER><P><FONT SIZE=-1>Program for Climate Model Diagnosis and Intercomparison
+<BR>
+Lawrence Livermore National Laboratory, Livermore, CA 94550</FONT></P></CENTER>
+
+<CENTER><P><B>October 1996</B></P></CENTER>
+
+<CENTER><TABLE BORDER=3 CELLSPACING=5 CELLPADDING=5 >
+<TR>
+<TD COLSPAN=2>
+<CENTER><P><A NAME="Table_of"></A><FONT COLOR="#800000">Table of Contents</FONT></P></CENTER>
+</TD>
+</TR>
+
+<TR ALIGN=LEFT VALIGN=TOP>
+<TD ALIGN=LEFT VALIGN=TOP><A HREF="#Abstract">Abstract</A> <B>&nbsp;</B>
+
+<P><A HREF="#BM1__Introduction">1. Introduction </A></P>
+
+<P><A HREF="#BM2__Description">2. Description of the reanalysis</A></P>
+
+<P><A HREF="#BM3__Winter">3. Winter monsoon circulation </A></P>
+
+<DL>
+<DD><A HREF="#BM3_1_Mean">3.1 Mean state </A></DD>
+
+<DD><A HREF="#BM3_2_Variance">3.2 Variance of SLP and surface air temperature
+</A><BR>
+</DD>
+</DL>
+
+<P><A HREF="#BM4__Cold">4. Cold surges and Siberian high </A></P>
+
+<DL>
+<DD><A HREF="#BM4_1_Criteria">4.1 Criteria for cold surges </A></DD>
+
+<DD><A HREF="#BM4_2_Statistics">4.2 Statistics, trajectories and spatial
+evolution of cold surges </A></DD>
+</DL>
+</TD>
+
+<TD><A HREF="#BM4__Cold">4. Cold surges and Siberian high (cont.) </A>
+<DD><A HREF="#BM4_3_Temporal">4.3 Temporal distribution of cold surges
+and Siberian high</A> <BR>
+</DD>
+
+<DL>
+<DT><A HREF="#BM5__Interannual">5. Interannual variation </A></DT>
+
+<DD>&nbsp;<A HREF="#BM5_1_Cold">5.1 Cold surges </A></DD>
+
+<DD>&nbsp;<A HREF="#BM5_2_Mean">5.2 Mean meridional wind</A> </DD>
+
+<DD>&nbsp;<A HREF="#BM5_3_Large_scale">5.3 Large-scale features</A> <BR>
+</DD>
+</DL>
+
+<P><A HREF="#BM6_Summary">6. Summary and discussion </A></P>
+
+<P><A HREF="#Acknowledgments">Acknowledgments</A></P>
+
+<P><A HREF="#References">References</A></P>
+</TD>
+</TR>
+</TABLE></CENTER>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<P><A NAME="Abstract"></A><B>Abstract</B></P>
+
+<P>This paper presents the climatology of the East Asian winter monsoon
+and cold surges based on the 1979-1995 NCEP/NCAR reanalysis. In addition
+to documenting the frequency, intensity, and preferred propagation tracks
+of cold surges and the evolution patterns of associated fields, the temporal
+distribution of the Siberian high and cold surges is discussed. Further,
+this study examines the interannual variation of the winter monsoon and
+cold surges and its relationship with ENSO. </P>
+
+<P>There are on average thirteen cold surges in each winter season (October
+to April), of which two are strong cases. The averaged intensity of cold
+surges, measured by maximum surface pressure, is 1053 hPa. The cold surges
+originate from two primary source regions: 1) northwest of Lake Baikal,
+and 2) north of Lake Balkhash. The typical evolution of a cold surge occurs
+over the period of 5-14 days. Trajectory and correlation analyses indicate
+that, during this time high pressure centers propagate southeastward around
+the edge of the Tibetan Plateau from the mentioned source regions. Some
+of these high pressure centers then move eastward and diminish over the
+ocean, while others proceed southward. The signature of the associated
+temperature, wind, and pressure fields propagate farther southward and
+eastward. The affected area encompasses the bulk of the maritime continent.
+Although the intensity of the Siberian high is found to peak during December
+and January, the frequency of cold surges has a maximum in November and
+in March. This result suggests that November through March should be considered
+as the East Asian winter monsoon season. </P>
+
+<P>Two stratifications of cold surges are used to examine the relationship
+between ENSO and the interannual variation of the winter monsoon. The first
+one, described as the conventional cold surges, indicates that the cold
+surge frequency reaches a minimum a year after El Nino events. The second
+one, defined as the maximum wind events near the South China Sea, shares
+the same source regions as the first. This stratification of surges is
+found to be in good agreement with the Southern Oscillation Index (SOI).
+Low SOI (high SOI) events coincide with high (low) frequencies of cold
+surges.</P>
+
+<P>The interannual variation of averaged meridional wind near the South
+China Sea and the maritime continent is dominated by the South China Sea
+cold surges, and is also well correlated (R=0.82) with the SOI. Strong
+wind seasons are associated with La Nina and high SOI events; likewise,
+weak wind years are linked with El Nino and low SOI cases. This pattern
+is restricted north of the equator within the region of (0&deg;N-20&deg;N,
+110&deg;E-130&deg;E), and is confined to the near surface layer. The surface
+Siberian high, 500 hPa trough and 200 hPa jetstream, all representing the
+large-scale monsoon flow, are found to be weaker than normal during El
+Nino years. In particular, the interannual variation of the Siberian high
+is in general agreement with the SOI. </P>
+
+<P>
+<HR WIDTH="100%"></P>
+
+<P><A HREF="#Table_of">Return to Table of Contents</A> 
+<HR WIDTH="100%"></P>
+
+<P><A NAME="BM1__Introduction"></A><B>1. Introduction</B></P>
+
+<P>The East Asian winter monsoon, which is associated with a strong Siberian
+high and active cold surges, is one of the most energetic monsoon circulation
+systems. The dramatic shift of the northeasterlies and the outbreak of
+cold surges dominate the winter weather and climate in the East Asian region.
+The winter monsoon and cold surges exert a strong impact on the extratropical
+and tropical planetary-scale circulations (Chang and Lau, 1982), and influence
+the SSTs in the tropical western Pacific (Chang et al., 1979). Their general
+characteristics and the possible linkage between cold surges and tropical
+atmospheric and oceanic phenomena have been examined in many studies. For
+example, Chang and Lau (1982) showed that the outbreak of winter monsoon
+surges forced short term changes in the Hadley and Walker Circulation,
+the East Asian jetstream and large-scale deep convection over the equatorial
+western Pacific. Boyle (1986a, 1986b) found that the frequency and intensity
+of the monsoon surges for a given month were related to the intensity of
+the East Asian jetstream and the extratropical large-scale circulation
+patterns. Lau and Chang (1987) suggested that the interannual variations
+of the winter monsoon and cold surges may be related to ENSO and tropical
+intraseasonal oscillations. Ding and Krishnamurti (1987) noted an eastward
+shift of the tropical planetary scale divergent circulation in association
+with the cold surges which was very similar to the shift of the divergent
+circulation between El Nino and La Nina years.</P>
+
+<P>However, little attention has been given to the climatological aspects
+of the winter monsoon and cold surges. Boyle and Chang (1984) documented
+the mean winter circulation statistics based on the Navy Fleet Numerical
+Oceanography Center's (FNOC) gridded analyses. Pan et al. (1985) compiled
+the statistics of the Siberian high and cold air outbreaks in China with
+emphasis on the effect to local weather forecast. Ding and Krishnamurti
+(1987) summarized the climatological tracks of cold surges based on the
+data from the winter (DJF) of 1980 to 1984. Although the winter monsoon
+was much weaker than normal during the 1982-83 El Nino event (Lau and Chang,
+1987), there has never been a systematic investigation on the relationship
+between ENSO and the interannual variation of the winter monsoon and cold
+surges.</P>
+
+<P>The purpose of this study is to present the climatology of cold surges
+and the Siberian high based on the 1979-1995 NCEP/NCAR reanalysis. We emphasize
+the temporal and spatial distribution of the cold surges and the Siberian
+high, their origin, propagation paths and evolution patterns. Of particular
+interest is the interannual variation of winter monsoon and cold surges.
+Given that the winter monsoon activity was weaker during the 1982-83 period,
+one of our goals is to determine if a consistent relationship exists between
+ENSO and the interannual variation of the winter monsoon and cold surges.
+
+<HR WIDTH="100%"></P>
+
+<P><A HREF="#Table_of">Return to Table of Contents</A> 
+<HR WIDTH="100%"></P>
+
+<P><A NAME="BM2__Description"></A><B>2. &nbsp;Description of the reanalysis</B></P>
+
+<P>We use twice-daily surface and upper-air fields from the NCEP/NCAR reanalysis
+(Kalnay et al., 1996) for the period of 1979-1995. The surface quantities
+include temperature, wind, and sea-level-pressure (SLP); upper-air fields
+are winds at 925 hPa, 850 hPa, 700 hPa, and 200 hPa and geopotential height
+at 500 hPa. The advantage of this data set is that the reanalysis used
+a &quot;frozen&quot; state-of-the-art analysis/forecast system to perform
+the data assimilation throughout the whole period, thus circumventing problems
+with previous numerical weather prediction analyses due to changes in techniques,
+models and data assimilation. Also, this dynamically consistent reanalysis
+offers good horizontal (2.5&deg; x 2.5&deg;) and vertical resolution (17
+levels).</P>
+
+<P><A NAME="BM3__Winter"></A><B>3. Winter monsoon circulation</B></P>
+
+<P><A NAME="BM3_1_Mean"></A>3.1&nbsp; Mean state</P>
+
+<P>The winter monsoon circulation has been documented by many authors (e.g.,
+Boyle and Chang 1984; Lau and Li 1984; Lau and Chang 1987; Boyle and Chen
+1987) and is summarized here to serve as a background for this paper. The
+dominant surface feature of the winter monsoon is the Siberian high. The
+winter SLP averaged from 1979/80 - 1994/95 is shown in <A HREF="f1.htm">Fig.
+1.</A> This surface pressure system, with central pressure in excess of
+1036 hPa, covers the entire East Asian continent and yields northeasterly
+flow over a large part of Asia. At 500 hPa, the flow pattern is dominated
+by the coastal trough. The intensity of this trough is quasi-geostrophically
+linked to the surface Siberian high. At 200 hPa, the most prominent feature
+is the East Asian jet near Japan. This jet, the strongest on the globe,
+is associated with intense baroclinicity, large vertical wind shear and
+strong cold advection. It is maintained by the Coriolis torque acceleration
+exerted on the ageostrophic wind near the jet entrance region. Its strength
+is inherently related to the intensity of the surface Siberian high and
+the 500 hPa trough. These features characterize the three-dimensional large-scale
+monsoon circulation. </P>
+
+<P><A HREF="f1.htm">Fig. 1</A> also presented the winter (DJF) surface
+wind averaged from 1979/80 - 1994/95. This climatological surface wind
+represents contributions from both the quasi-stationary Siberian high and
+the cold surges. North of 30&deg;N, the wind blows along the north and
+east periphery of the Siberian high. This anticyclonic flow pattern is
+a reflection of the quasi-stationary pressure system. South of 30&deg;N
+where the Siberian high pressure exerts less influence, the wind maximum
+near the South China Sea can be largely attributed to the cumulative effects
+of the cold surges. One of the main features of this field is that the
+westerly flow near Japan bifurcates. The eastward branch merges with the
+Aleutian low; the southern branch joins the tradewind belt. Cold air intensity
+and thickness usually reduce significantly as the airmass moves southward.
+Thus, the winter monsoon is a shallow phenomenon in lower latitudes.<BR>
+
+<HR WIDTH="100%"></P>
+
+<P><A HREF="#Table_of">Return to Table of Contents</A> 
+<HR WIDTH="100%"></P>
+
+<P><A NAME="BM3_2_Variance"></A>3.2 Variance of SLP and surface air temperature</P>
+
+<P>The standard deviation of SLP in <A HREF="f2.htm">Fig. 2 (a)</A> indicates
+that the Siberian high pressure is a rather stationary feature of the winter
+monsoon. The largest variations occur to the northwest of the Siberian
+high, and to the east where the variability near the Aleutian low dominates.
+Although the standard deviation of temperature is largest at high latitudes
+as indicated in <A HREF="f2.htm">Fig. 2 (b)</A>, substantial variability
+also occurs over eastern China. This is noticed as a pronounced southward
+extension of the standard deviation over this region. A similar, but less
+well defined southward extension is also seen in the variability of SLP.
+The southward extensions in both variables is an indication of the cold
+surge activity.</P>
+
+<P><A HREF="f2.htm">Figs. 2 (c) </A>and <A HREF="f2.htm">(d)</A> show the
+percent of total variance of SLP and surface air temperature explained
+by periods of 6-14 days, the typical lifetime of cold surges. Along the
+east coast of China, over 25% of the total variance of surface air temperature
+and SLP occurs on time scales of 6-14 days. The structure of the temperature
+variation exhibits more regionality than that of SLP and has a pronounced
+signal over eastern China. Power spectra of the surface air temperature
+and SLP in this vicinity exhibits many common spectral peaks on these time
+scales (not shown) suggesting a close association between the temperature
+and SLP variation in this region, which is consistent with the characteristics
+of cold surges. The substantial SLP variance over the Pacific Ocean near
+25&deg;N and the one northward over Japan are not necessarily associated
+with cold surge activity. These variation maxima are intriguing features
+of the SLP which will be investigated in future works. Cold air activity
+over the East Asia continent and the South China Sea will be of interest
+here.</P>
+
+<P><A NAME="BM4__Cold"></A><B>4. Cold surges and Siberian high</B></P>
+
+<P>The cold surges are the most important transient disturbances embedded
+within the mean monsoon circulation. The occurrence of a cold surge is
+characterized by a southward movement of a surface anticyclone and an associated
+abrupt 24-48 hours surface air temperature drop in the affected regions.
+The typical scenario of a cold air outbreak is: the Siberian high and the
+coastal trough reach a certain intensity. Further west over the continent,
+an upper level short wave undergoes strong development as it moves eastward.
+Eventually, the short wave develops into a major trough and replaces the
+old quasi-stationary coastal trough. During this process, a surface anticyclone
+moves southward and a cold surge occurs (Staff members of Academia Sinica,
+1957). It should be pointed out that the build-up and maintenance of the
+Siberian high pressure is a necessary condition for the occurrence of cold
+surges. Radiative cooling, persistent cold air advection (usually blocking
+over Urals) throughout the troposphere and large-scale descending motion
+all contribute to the maintenance of the cold Siberian high (Ding and Krishnamurti,1987).
+However, cold surges should not be regarded as the simple southward expansion
+or temporal variability of the Siberian highs. Rather, it is of a separate
+dynamical entity. The Siberian high and the cold surge are the two most
+characteristic weather phenomena of the winter monsoon. The relationship
+between the two will be further discussed in Section 4.2.<BR>
+
+<HR WIDTH="100%"></P>
+
+<P><A HREF="#Table_of">Return to Table of Contents</A> 
+<HR WIDTH="100%"></P>
+
+<P><A NAME="BM4_1_Criteria"></A>4.1 Criteria for cold surges</P>
+
+<P>Objective criteria to identify the cold surges are required in this
+study. Many cold surge definitions can be found in the literature. A summary
+of the often used definitions is given in Boyle and Chen (1987). Some of
+the cold surges are purposely defined for the convenience of weather forecasting.
+Definitions vary depending on regions of interest. For example, cold surges
+defined over the South China Sea may have nothing to do with cold surges
+defined near Korea. The essence of the cold surges, as mentioned above,
+is the rapid south-southeastward movement of a surface anticyclone, which
+brings significant surface air temperature drop in the affected regions.</P>
+
+<P>In defining a cold surge from the reanalysis, we choose to average the
+necessary fields at particular regions which encompass a nine-grid-point
+rectangular at the 2.5&deg; x 2.5&deg; resolution <A HREF="f3.htm">(see
+Fig. 3)</A>. Region 1 is in southern Siberia, region 2 is in the middle
+of China, and region 3 covers part of southern China. Using information
+from these regions, we define a cold surge as follows:</P>
+
+<P>1) Outbreak requires, (a) a surface anticyclone must be identified (Criteria
+in Zhang and Wang, 1996) in the vicinity of region 1, which has an averaged
+SLP &gt;1035 hPa, and (b) During the movement of a surface anticyclone,
+the 24-48 hour surface air tem-perature drop must exceed 9&deg;C in region
+2, or 6&deg;C in region 3.</P>
+
+<P>2) Ending of a cold surge occurs when, (a) a negative pressure tendency
+at the anticy-clone center has persisted for 24 hours and the center pressure
+is &lt;1025 hPa, and (b) positive surface temperature trend was found over
+50% of the grid points in the bulk of the East Asia continent (102.5&deg;E-117.5&deg;E,
+25&deg;N-50&deg;N). </P>
+
+<P>A cold surge is chosen when these criteria are met. The thresholds,
+mostly based on synoptic experience, can be altered within a certain range.
+Despite this, the overwhelming majority of surges will still be identified
+because the key characteristics of cold surges are represented by these
+criteria. Also, since a cold surge affects large areas of East Asia in
+temperature and pressure fields, it is unlikely that a non-surge event
+will be identified as a surge.</P>
+
+<P>In order to verify the identified cold surges, time series of surface
+air temperature in regions 1, 2, and 3 (T1, T2, and T3) of the 1987/88
+winter are plotted in <A HREF="f4.htm">Fig. 4.</A> According to the criteria,
+if a surface anticyclone has reached a certain intensity, a required drop
+in either T2 or T3 will qualify the disturbance to be a cold surge. All
+the observed cold surges during this season-known from other sources-were
+found to be associated with a temperature drop in region 2 or region 3.
+Fig. 4 illustrates how quickly the temperature can drop in a specific location
+and its southward propagation. One of the strongest cold surges ever observed
+occurred during late November of 1987. The recorded maximum surface pressure
+is in excess of 1081 hPa; the temperature drops are ~ 15&deg;C in all three
+regions. </P>
+
+<P>The timing, duration, and frequency of cold surges identified using
+this criteria are further compared with those defined operationally by
+the Beijing Meteorological Center (BMC) for the period 1979-84 (the period
+for which the data from BMC are available) and good agreement were found
+between the two. Thus, we have confidence that the cold surge definition
+is appropriate given the verification provided from in situ observations.
+<BR>
+
+<HR WIDTH="100%"></P>
+
+<P><A HREF="#Table_of">Return to Table of Contents</A> 
+<HR WIDTH="100%"></P>
+
+<P><A NAME="BM4_2_Statistics"></A>4.2 Statistics, trajectories and spatial
+evolution of cold surges</P>
+
+<P>Based on the above criteria, over 200 cold surges have been identified
+during the 1979-95 period. Table 1 gives the average frequency, intensity,
+and duration for cold surges and strong cold surges. Strong cases are defined
+as events that are associated with temperature drop &gt;10&deg;C and northerly
+wind &gt; 4 m s-1 in region 3. By the addition of this wind criterion,
+the strong cases are assured to be cold surges that exert impacts in the
+tropical region. The average maximum center pressure is ~1060 hPa for strong
+surges, and it is ~ 1053 hPa for all cold surges. Lifetimes of individual
+surges range from 5 - 14 days, with an average duration of ~7 days for
+cold surges and ~ 9 days for strong events.</P>
+
+<P>The trajectories of the surface anticyclones associated with each of
+the cold surges are shown in <A HREF="f5.htm">Fig. 5.</A> The circles indicate
+the original location of the high pressure center and the squares denote
+the termination points. Based on the trajectories, cold surges tend to
+originate from two distinct regions. The first is located northwest of
+Lake Baikal near 95&deg;E-105&deg;E, 45&deg;N-60&deg;N, and the second
+is to the north of Lake Balkhash and near 75&deg;E-90&deg;E, 52&deg;N-60&deg;N.
+All the surges propagate southward or southeastward over eastern China.
+Some of them ended in the East China Sea and coastal regions while others
+propagate further south. </P>
+
+<P>Although the cold surge trajectories terminated around 30&deg;N, the
+pressure, temperature, and meridional wind perturbations are observed further
+south. This is indicated in <A HREF="f6.htm">Fig. 6</A>, the climatological
+evolution of cold surge associated SLP, temperature and northerly wind.
+For each winter (120 days, mid-November through mid-March), daily values
+of T3 are lag correlated with each of these fields. At each lag, the average
+correlation from all 16 winters is calculated. Since a cold surge is associated
+with a decrease in temperature the sign convention is such that: 1) a negative
+correlation with SLP indicates high pressure, 2) a positive auto-correlation
+with surface air temperature indicates low temperature, and 3) a positive
+correlation with the meridional wind indicates enhanced northerlies. Correlations
+for |r| 0.2 are contoured. This corresponds to the 95% confidence level
+for 100 independent time samples. While estimating the actual number of
+degrees of freedom is problematic, the correlation cutoff used is very
+conservative given that 120 time points in each of 16 years of data were
+used giving the potential of 1918 degrees of freedom ([16 x 120]-2).</P>
+
+<P>At day -4, a massive high pressure covers most of Siberia, and temperatures
+are below normal. However, the signal in the meridional wind is weak at
+best. The centers of action in the surface air temperature and the SLP
+are located near Mongolia (95&deg;E, 50&deg;N) at this time. It is of interest
+to note the presence of significantly below normal SLP in the vicinity
+of the maritime continent. This indicates the presence of a north-south
+gradient of SLP prior to the southward migration of the cold air and enhanced
+northerlies. Two days later, these centers of action have shifted southeastward,
+and the correlations have become stronger. The signal in the v-wind also
+strengthens, with the maximum northerlies located to the east of the SLP
+and temperature signals. By day 0 the cold air and pressure surge have
+spilled southward along the eastern flank of the Tibetan Plateau, with
+the strongest correlations located over region 3. By day +2 the cold surges
+have progressed further south, with the centers of action located over
+southeastern China. The signal in the v-wind is located even further south,
+with the strongest correlation (0.5) near 110&deg;E, 5&deg;N. Even on day
++4, there still remains a close correspondence between the SLP and temperature
+centers, having now progressed to the southwest. The v-wind signature remains
+intact over the South China Sea, with the maximum correlation located on
+the equator at 105&deg;E. The deeper intrusion of the northerlies into
+the tropics than either the SLP or temperature signature is a consistent
+feature during individual years, when the correlations may be even stronger.</P>
+
+<P>The eastward extension is also a robust feature although may not appear
+as significant as the southward component. This is because the anticyclones
+that travel to the east, unlike those to the south, are subject to immediate
+and strong deformation by the warm and moist marine boundary once they
+reach the east coast. Cold surges that ended in the vicinity of the East
+China Sea belong to this category, and comprise a substantial number of
+total cold surges <A HREF="f5.htm">(see Fig. 5)</A>. The patterns of lag
+correlations of T2 with temperature, SLP and surface wind are found to
+be very similar to those presented in <A HREF="f6.htm">Fig. 6</A> (not
+shown). </P>
+
+<P>The frequency, intensity, regionality, trajectory, and propagation patterns
+of the cold surges presented above have extended and substantiated the
+results of previous studies (Staff member of Academia Sinica, 1957; Zhu
+et al., 1981; Ding and Krishnamurti, 1987). They are also consistent with
+the annual cold surge summaries of BMC (1990).<BR>
+
+<HR WIDTH="100%"></P>
+
+<P><A HREF="#Table_of">Return to Table of Contents</A> 
+<HR WIDTH="100%"></P>
+
+<P><A NAME="BM4_3_Temporal"></A>4.3 Temporal distribution of cold surges
+and Siberian high </P>
+
+<P><A HREF="f7a.htm">Figs. 7 (a)</A> and <A HREF="f7b.htm">(b)</A> give
+the monthly cold surge events and the number of days that the Siberian
+high central pressure is greater than 1050 hPa. The intensity of the Siberian
+high tends to peak in December and January. However, the cold surge frequency
+exhibits maxima in November and March. This result contradicts with the
+well-accepted close relationship between the intensity of the Siberian
+high and occurrence of cold surges (Ding, 1994). Both dynamical and thermodynamical
+reasons can be attributed to this. </P>
+
+<P>First, the East Asian large-scale flow is usually in a low-index mode
+during the regime transition period of November and March (Zhu et al.,
+1979). In December and January, however, the usual high-index large-scale
+flow is characterized by a strong Siberian high and an intense jetstream.
+This pattern is unfavorable for the occurrence of cold surges despite the
+abundance of cold air during this time. This is because that the short
+waves tend to move rapidly through such a pattern without causing any disturbances
+(Boyle, 1986a). The low index flow background, on the other hand, typically
+has a blocking over the Asian continent and deep troughing along the coast.
+This flow pattern yields a northwesterly flow over Lake Baikal which is
+highly unstable and more ready to release potential energy when triggered
+by a short wave (Boyle, 1986a). </P>
+
+<P>Secondly, an important criterion of a cold surge is the 24-48 hour surface
+air temperature drop. During December and January, the jetstream is further
+south and the surface air temperature is relatively lower. As such, it
+takes a very strong anticyclone to induce a substantial temperature change
+in a cold background. While the surface air temperature is relatively warmer
+during November and March, cold air and anticyclones with modest intensity
+can significantly reduce the surface air temperature. From the view of
+weather forecasters, it is the cold surges that occur during November and
+March that yield a more abrupt temperature drop have the most significant
+damaging effect on local agriculture and economy. </P>
+
+<P>Recently, a very similar monthly distribution of cold surges has been
+found by Ding and collaborators based on cold surges from 6 winters (Ding,
+personal communication, 1996). They suggest that the warm and moist troughs
+that moving out of the Bay of Bengal result in the relatively lower frequency
+cold surges during December and January. </P>
+
+<P>As mentioned before, one of the necessary conditions of cold surge outbreak
+is that the Siberian high reaches a certain intensity. But this is by no
+means guarantee that the cold surge frequency should monotonically increase
+as the Siberian high intensifies. The statistics based on the 17-year data
+shown here and Ding's recent results do not support &quot;The higher the
+Siberian high pressure, the greater the possibility of cold surge occurrence
+&quot;(Ding, 1994), a statement that has been mistakenly known in the forecasting
+community. </P>
+
+<P>The temporal distribution of strong cold surges is examined. Of all
+the 26 strong cases identified, 20 of them occurred in December, January
+and February, and five in November, only one in March and none during October
+or April. The strong cold surges tend to occur during very cold months.
+This suggests that large surface pressure gradient associated with a very
+strong surface anticyclone and abundant sources of cold air is an important
+driving force to push the cold air far into the tropics. This result also
+suggests that the intensity of the Siberian high may be related to the
+occurrence of strong cold surges that affect the tropical regions. Because
+the cold surge frequency is high in November and March and the prevailing
+northeasterly wind dominates a large area of East Asia during these months,
+November through March (NDJFM) should be the months for studying the East
+Asian winter monsoon and cold surges, rather than December through February
+(DJF) which the majority of winter monsoon studies has emphasized.<BR>
+
+<HR WIDTH="100%"></P>
+
+<P><A HREF="#Table_of">Return to Table of Contents</A> 
+<HR WIDTH="100%"></P>
+
+<P><A NAME="BM5__Interannual"></A><B>5. Interannual variation</B></P>
+
+<P>In order to investigate the possible linkage between the interannual
+variation of the East Asian winter monsoon and ENSO, the 1979-1995 winter
+average Southern Oscillation Index is plotted in <A HREF="f8.htm">Fig.
+8</A>. Although the Southern Oscillation is not a standing phenomenon,
+the evolution of monsoon circulation during ENSO phases is ignored given
+that the winter monsoon is not examined on a monthly basis. The two major
+El Nino events of 1982/83 and 1986/87 exhibit low SOI. Negative departures
+of the SOI also occur during the 1989/90 and 1991/92 seasons. The 1988/89
+La Nina event has SOI in excess of 2 hPa. </P>
+
+<P><A NAME="BM5_1_Cold"></A>5.1 Cold surges</P>
+
+<P>The annual cold surge frequency is first examined. An interesting feature
+in <A HREF="f9.htm">Fig. 9</A> is that minimum frequency events occurs
+one year after the El Nino years. To test the robustness of this result,
+we investigated the sensitivity of the cold surge frequency to the SLP
+threshold in the cold surge definition. Aside from an expected decline
+in cold surge frequency with a stricter SLP criterion, the interannual
+variations were found to be insensitive. Further, the cold surge frequency
+from BMC during 1980-1984 shows the same variation pattern as in Fig. 9.
+Data from BMC also indicates that cold surge frequency reaches a minimum
+one year after the 1957/58 and 1965/66 El Nino events. This phenomenon
+agrees with the 1~1.5 year lag response of the northeast China surface
+air temperature to the SST near the eastern equatorial Pacific suggested
+by Bao et al. (1989). </P>
+
+<P>As mentioned earlier, the definition of a cold surge is regionally dependent.
+The cold surges identified above, which are in good agreement with the
+observations from BMC, typically influence the bulk of East Asia and the
+coastal regions. However, a subset of these cold surges can reach to the
+South China Sea. This is illustrated in <A HREF="f10a.htm">Figs. 10 (a)</A>
+and <A HREF="f10b.htm">(b),</A> time series of meridional wind in three
+regions for the 1987/88 season, along with region 1 SLP. The phases of
+SLP variation are exactly reversed to those of region 3 meridional wind,
+which are followed chronologically by the similar variation patterns near
+Taiwan and in the vicinity of the South China Sea. The lags between the
+variation patterns in each region, which represent the southeast propagation
+of the surface anticyclones, are around 1-3 days. </P>
+
+<P>The typical synoptic scenario of the propagation is as follows, before
+the outbreak of a cold surge, the intensification of the Siberian high
+simultaneously strengthens the northeasterly flow near region 3. The outbreak
+of the cold surge pushes the anticyclonic flow southeastward and increases
+the notherlies near Taiwan region. The wind then subsequently penetrated
+further into the northern part of the South China Sea and the cold surge
+ended. According to the weather forecasters (Li, personal communication,
+1996) of Hainan Island (18&deg;N, 110&deg;E), whether a cold surge will
+affect the Island and the surrounding oceans depends on its path and intensity.
+When this region is under the influence of a cold surge, the most conspicuous
+weather phenomenon is the strong northeasterly wind. The seven strong wind
+events (northerly wind &gt; 7 m/sec) near the South China Sea in the 1987/88
+season, as indicated in <A HREF="f10a.htm">Fig. 10 (a)</A>, is a subset
+of the eleven cold surges identified during the season. Strong wind events
+for other years are also examined (not shown). We found that, with on exception,
+every event is associated with a cold surge outbreak from the extratropics.</P>
+
+<P>Because the surface meridional wind is the most important indicator
+of the cold surge activity in Hainan area, we define the South China Sea
+cold surge as the number of days that maximum northerly wind &gt; 7 m/s
+in the region of (10&deg;N-20&deg;N,110&deg;E-120&deg;E). Similar definition
+has been used by Chang and Chen (1992). Based on this definition, the South
+China Sea cold surge frequency is shown in <A HREF="f11.htm">Fig. 11</A>.
+The interannual variation of cold surge frequency is in good agreement
+with the pattern of SOI (correlation coefficient = 0.85). Low cold surge
+frequencies coincide with El Nino and low SOI events; high frequencies
+accompany with La Nina and high SOI years. This agrees with observed strong
+wind record of Hainan Island (Li, personal communication, 1996) for winters
+of 1950-1980, which indicates that cold air activity is much reduced during
+the years of 1957/58, 1965/66, 1968/69, and 1972/73, all are El Nino events.
+<BR>
+
+<HR WIDTH="100%"></P>
+
+<P><A HREF="#Table_of">Return to Table of Contents</A> 
+<HR WIDTH="100%"></P>
+
+<P><A NAME="BM5_2_Mean"></A>5.2 Mean meridional wind</P>
+
+<P>Frequency of the South China Sea cold surges not only bears good relationship
+with the SOI, but also largely controls the meridional wind variation over
+the South China Sea and over even larger areas. <A HREF="f12.htm">Fig.
+12</A> shows time series of mean meridional wind for increasingly larger
+regions. The patterns in all the three regions are similar to that of the
+SOI. In agreement with the cold surges, stronger northerlies occur during
+La Nina and high SOI seasons, and weaker northerlies occur during El Nino
+and low SOI years. The correlation coefficient between the SOI and the
+meridional wind in the South China Sea (10&deg;N-20&deg;N,110&deg;E-120&deg;E)
+is 0.82. By examining the same time series as in Fig. 12 but over many
+nine-grid-point rectangular boxes near the western Pacific, we found that
+this SOI-like pattern of the wind does not exist in any of the areas outside
+the region of (0&deg;N-20&deg;N,100&deg;E-130&deg;E). </P>
+
+<P>The meridional wind variation is a shallow phenomenon, occurring primarily
+at the surface. This is demonstrated in Fig. 13 where the wind variations
+near the South China Sea are plotted at the 925 hPa and 850 hPa levels.
+Although the patterns at both levels still bear certain resemblance to
+that of the SOI, the biennial oscillation is the dominant mode. At 700
+hPa and above (not shown), the geostrophic flow is decidedly zonal over
+the entire East Asian continent and the wind in the northern part of the
+South China Sea is under great influence of the split jetstream south of
+the Tibetan Plateau. The signature of the SOI has been totally lost. Clearly,
+this SOI-like wind pattern is horizontally restricted within the region
+of (0&deg;N-20&deg;N,100&deg;E-130&deg;E) and vertically confined to the
+near surface layer. </P>
+
+<P>Based on the above discussions, it is clear that the variation of area
+averaged meridional wind near the South China Sea and the maritime continent
+hinges on the variation of the South China Sea cold surges. The South China
+Sea cold surges share the same origin as the conventionally defined cold
+surges. The area averaged meridional wind near the South China Sea is thus
+greatly controlled by the northerlies propagated from the extratropics.</P>
+
+<P><A NAME="BM5_3_Large_scale"></A>5.3 Large-scale features </P>
+
+<P>As mentioned earlier, the surface Siberian high, 500 hPa trough, and
+the 200 hPa jetstream characterize the winter monsoon large-scale circulation
+and their strength are inherently related to each other. </P>
+
+<P><A HREF="f14.htm">Fig. 14</A> presents the number of days that the central
+pressure is greater than 1050 hPa in the region of (45&deg;N-55&deg;N,
+90&deg;E-110&deg;E). Although this is not the only measure of the Siberian
+high intensity, the broad aspect of the interannual variation of this measure
+agrees with the SOI. The variation patterns indicate that, in general,
+the Siberian high is stronger (weaker) in La Nina (El Nino) and high (low)
+SOI years. The mean meridional wind averaged over the southeast periphery
+(5&deg;N-20&deg;N, 160&deg;E-180&deg;E) of the Siberian high, another way
+to represent the intensity of the high pressure, shows exactly the same
+result as that of Fig. 14 (not shown). </P>
+
+<P>The variation of the 500 hPa geopotential height anomaly along 135&deg;E
+is calculated. Although the overall variation pattern (not shown) is not
+comparable with the SOI, the 500 hPa trough is weaker during 1982/83, 1986/87
+and 1991/92 El Nino events. The 200 hPa East Asian jet is also examined.
+Although this jet is subject to propagation or expansion in the east-west
+direction during different phases of ENSO, the jet intensity (at 140&deg;E)
+is found abnormally weak during all three major El Nino events (not shown).
+This result is consistent with the weak Siberian high and 500 hPa trough.</P>
+
+<P>Overall, the large-scale monsoon circulation is weaker than normal during
+all the three major El Nino events. In particular, the variation pattern
+of the Siberian high generally agrees with the SOI.<BR>
+
+<HR WIDTH="100%"></P>
+
+<P><A HREF="#Table_of">Return to Table of Contents</A> 
+<HR WIDTH="100%"></P>
+
+<P><A NAME="BM6_Summary"></A><B>6. Summary and discussion</B></P>
+
+<P>The study of the East Asian winter monsoon and cold surges from the
+1979-1995 NCEP/NCAR reanalyses has revealed and extended several noteworthy
+climatological features of the winter monsoon. According to the conventional
+cold surge criteria, about 13 cold surges occur every winter season, of
+which two are strong cases that influence the tropical region. The average
+lifetime of the cold surges is about 7 days and the average intensity of
+highs is 1053 hPa. The strong cases usually last for about 9 days with
+average intensity of 1060 hPa.</P>
+
+<P>The cold surges tend to originate from two source regions: one is near
+the northwest of Lake Baikal and the other is to the north of Lake Balkhash.
+The high pressure centers propagate southeastward, and end in the east
+and southeast of China and surrounding oceans. Consistent with trajectories
+of pressure centers, correlation patterns indicate that the signature of
+associated SLP, surface wind and surface air temperature stretches further
+south and east. The southward extent includes the bulk of the maritime
+continent; the eastward extent reaches 150&deg;E. </P>
+
+<P>Although the intensity of the Siberian high varies according to the
+season and reaches its peak in January, the cold surges are most active
+during November and March.This result suggests that November through March
+should be considered as the East Asian winter monsoon season. It also indicates
+that the occurrence of cold surges does not monotonically increase with
+the strengthening of the Siberian high, an empirical rule that has been
+widely believed in the forecasting community. Examination of monthly distribution
+of strong cold surges indicates, however, that the majority of strong cold
+surges occurs during DJF. This result suggests that large pressure gradient
+associated with strong Siberian high is an important driving force to push
+the cold air far into the tropics.</P>
+
+<P>The two stratifications of cold surges are revealing when considering
+the relationship between ENSO and the interannual variation of the cold
+air activity. The first stratification, as described in the cold surge
+identification criteria, yields result that is consistent with the in situ
+observation from BMC. The interannual variation of cold surge frequency
+shows that minimum surge frequency occurs one year after an El Nino event.
+The second stratification, based on the maximum meridional wind event in
+the South China Sea, indicates that the interannual variation of the South
+China Sea cold surge is in good agreement with the SOI. High cold surge
+frequency is found during La Nina and high SOI events, low frequency is
+associated with El Nino and low SOI events. </P>
+
+<P>The variation of the mean meridional wind near the South China Sea and
+tge narutune hinges on the South China Sea cold surges. As in the case
+of the cold surges, the interannual variation of the wind is also well
+correlated with the SOI. Strong wind years are associated with La Nina
+and high SOI events; weak wind years are found during El Nino and low SOI
+events. This pattern of variation is restricted north of the equator within
+(0&deg;N-20&deg;N,100&deg;E-130&deg;E), and confined to the near surface
+layer. The interannual variation of the Siberian high, measured by means
+of both pressure and wind, is in general agreement with the SOI. Both the
+strength of the 200 hPa jetstream and the 500 hPa trough are found to be
+weaker than normal during El Nino events, although their interannual variation
+patterns do not agree with the SOI as closely as that of the Siberian high.</P>
+
+<P>Given the close relationship between the SOI and the interannual variation
+of the monsoon meridional wind and cold surges, it is natural to wonder
+why some of the monsoon related disturbances, either originated from or
+located in the extratropics, exhibit variation patterns similar to the
+SOI, and what are the physical mechanisms between the ENSO/winter monsoon
+interaction. </P>
+
+<P>During a typical El Nino year, the convective activity in the maritime
+continent is usually reduced. If the cumulus convection in this region
+is one of the most important monsoon energy sources as suggested by Ramage
+(1971), the suppression of the maritime convection should be responsible,
+at least partly, for the weaker than normal extratropical monsoon circulation
+during El Nino events. With the available observed outgoing longwave radiation
+(OLR) data from the National Oceanic and Atmospheric Administration, we
+have computed the OLR anomaly in the maritime continent (110&deg;E-120&deg;E,
+5&deg;N-5&deg;S) from 1979-1992. The overall interannual variation pattern
+(not shown here) is not as close to the SOI as that of the South China
+Sea cold surges or the Siberian high. However, negative anomaly is found
+during the 1988/89 La Nina season; likewise, positive OLR anomalies are
+found during the 1982/83 and 1986/87 El Nino seasons. The correlation coefficient
+between the OLR anomaly and the SOI is |R|=0.5.</P>
+
+<P>On the other hand, evidence indicated that the winter monsoon and cold
+air activity can greatly affect the tropical convective activity and SST.
+Slingo (1996, personal communication) found that Indonesian convection
+is enhanced when cold surges penetrated far into the tropics. Chang et
+al. (1979) have shown that cold surges are capable of influencing the tropical
+SST. But whether the cold surges can significantly affect the tropical
+region, as has been discussed, depends on the intensity and path of the
+cold surges. It may also relate to the background large-scale circulation.
+Theoretical studies have suggested (Branstator 1983, Lau and Lim 1984)
+that the interaction between the tropical convection and midlatitude circulation
+depends critically on the relative position of the convection and extratropical
+quasi-stationary waves. It has also been suggested that the interaction
+between cold surges and convective activities near the maritime continent
+will in turn modify the extratropical and tropical synoptic and planetary
+scale circulations (Chang and Lau, 1980). Apparently, further studies are
+much needed to delineate the mechanism of the interaction between the winter
+monsoon and convection near the maritime continent.</P>
+
+<P>In summary, in addition to extend and substantiate the climatological
+aspects of the East Asian winter monsoon and cold surges, the current study
+has clearly indicated that the interannual variation of the South China
+Sea cold surges is in good agreement with the SOI. The South China Sea
+cold surges share the same origin with the conventionally defined cold
+surges. They also dominate the variation of the area averaged meridional
+wind near the South China Sea and the western Pacific. The conventionally
+defined cold surges, on the other hand, reached minimum frequencies one
+year after El Nino events. Large-scale monsoon circulations are found to
+be weaker than normal during El Nino years. However, physical mechanisms
+responsible for the interaction between ENSO and the winter monsoon are
+still not well understood, especially problems on if and how the winter
+monsoon cold air activity affects the ENSO through its impact on tropical
+SST pattern and convective activities in the maritime continent. Simulations
+of coupled ocean models and GCM simulations with specified observed SST,
+such as simulations from the Atmospheric Model Intercomparison Project
+(AMIP), should provide a good opportunity to address these problems. <BR>
+
+<HR WIDTH="100%"></P>
+
+<P><A HREF="#Table_of">Return to Table of Contents</A> 
+<HR WIDTH="100%"></P>
+
+<P><A NAME="Acknowledgments"></A><B>Acknowledgments</B></P>
+
+<P>We wish to thank Yihui Ding of National Climate Center, China for helpful
+discussions and sharing his yet-to-be-published results, and Y.-L. Zhang
+and S.-J. Chen of Peking University, China for providing the observed cold
+surge data. Tian-Fu Li of Hainan Meteorological Bureau provided valuable
+information and offered his forecasting experience. Michael Fiorino facilitated
+access to the NCEP/NCAR reanalysis. This work was performed under the auspices
+of the U.S. Department of Energy Environmental Science Division at the
+Lawrence Livermore National Laboratory under contract W-7405-ENG-48.</P>
+
+<P><A NAME="References"></A><B>References</B></P>
+
+<P><B>Bao, C.-L., S.-M. Xie,</B> and D.-Y. Wei, 1989: The East Asian winter
+monsoon and El Nino event. Preprint, US/PRC Monsoon Workshop, University
+Park, PA. The Pennsylvania State University. 23-25.</P>
+
+<P><B>Beijing Meteorological Center, </B>1990: Annual cold surge summary.
+BMC internal report. [Available from Data Processing Center, Beijing Meteorological
+Center, Beijing, 100871, China]</P>
+
+<P><B>Boyle, J. S., </B>1986a: Comparison of the synoptic conditions in
+midlatitude accompanying cold surges over the Eastern Asia for the months
+of december 1974 and 1978. Part 1: monthly mean fields and individual events.
+Mon. Wea. Rev., 114, 903-918.</P>
+
+<P><B>Boyle, J. S.,</B> 1986b: Comparison of the synoptic conditions in
+midlatitude accompanying cold surges over the Eastern Asia for the months
+of december 1974 and 1978. Part 2: relation of surge events to features
+of the longer term mean circulation. Mon. Wea. Rev., 114, 919-929.</P>
+
+<P><B>Boyle, J. S., </B>and C.-P. Chang, 1984: Monthly and seasonal winter
+climatology over the global tropics and subtropics for the decade 1973-1983.
+Report NPS-63-84-006, 30pp. [Available from Naval Postgraduate School,
+Monterey, CA, 93943]</P>
+
+<P><B>Boyle, J. S., </B>and T.-J. Chen, 1987: Synoptic aspects of the wintertime
+East Asian monsoon. Monsoon Meteorology. C.-P. Chang and T. N. Krishnamurti,
+Eds., Oxford Univer. Press. 125-160.</P>
+
+<P><B>Branstator, G.,</B> 1983: Horizontal energy propagation in a barotropic
+atmosphere with meridional and zonal structure. J. Atmos. Sci., 40, 1689-1708.</P>
+
+<P><B>Chang, C.-P.,</B> and K.-M. Lau, 1980: Northeasterly cold surges
+and near-equatorial disturbances over the Winter MONEX area during December
+1974. Part 2: Planetary-scale aspects. Mon. Wea. Rev., 108, 298-312.</P>
+
+<P><B>Chang, C.-P.,</B> and K.-M. Lau, 1982: Short-term planetary scale
+interaction over the tropics and the mid-latitudes. Part 1: contrast between
+active and inactive period. Mon. Wea. Rev., 110, 933-946.</P>
+
+<P><B>Chang, C.-P.,</B> and J. M. Chen, 1992: A statistical study of winter
+monsoon cold surges over the South China Sea and the large-scale equatorial
+divergence. J. of Meteo. Soc. of Japan, 70-1, 287-302.</P>
+
+<P><B>Chang, C.-P.,</B> J. Erickson, and K.-M. Lau, 1979: Northeasterly
+cold surges and near-equatorial disturbances over the winter-MONEX area
+during 1974. Part 1: Synoptic aspects. Mon. Wea. Rev., 107, 812-829.</P>
+
+<P><B>Ding, Y. H.</B> 1994: Monsoon over China. Kluwer Academic Publishers,
+432pp.</P>
+
+<P><B>Ding, Y. H.</B> and T. N. Krishnamurti, 1987: Heat budget of the
+Siberian high and the winter monsoon. Mon. Wea. Rev., 115, 2428-2449.</P>
+
+<P><B>Kalnay, E.,</B> M. Kanamitsu, R. Kistler, W. Collins, D. Deaven,
+L. Gandin, M. Iredell, S. Saha, G. White, J. Woollen, Y. Zhu, M. Chelliah,
+W. Ebisuzaki, W. Higgins, J. Janowiak, K. C. Mo, C. Ropelewski, J. Wang,
+A. Leetmaa, R. Reynolds, R. Jenne, and D. Joseph, 1996: The NCEP/NCAR 40-year
+reanalyses project. Bull. Ame. Meteor. Soc., 77, 437-471. </P>
+
+<P><B>Lau, K.-M.,</B> and C.-P. Chang, 1987: Planetary scale aspects of
+the winter monsoon and atmospheric teleconnections. Monsoon Meteorology.
+C.-P. Chang and T. N. Krishnamurti, Eds., Oxford Univer. Press. 161-201.</P>
+
+<P><B>Lau, K.-M., </B>and M.-T. Li, 1984: The monsoons of East Asia and
+its global associations - a survey. Bull. Ame. Meteor. Soc., 65, 114-125.Lau,
+N.-C., and K.-M. </P>
+
+<P><B>Lau, K.-M.,</B> 1984: The structure and energetics of midlatitude
+disturbances accompanying cold-air outbreaks over East Asia. Mon. Wea.
+Rev., 112, 1309-1327.</P>
+
+<P><B>Pan H.-M., </B>X. Jia, and X.-Z. Young, 1985: The climatological
+features of outbreaks of cold air in China. Paper collection of Beijing
+Meteorological Center, CMA. 120-131. [Available from Beijing Meteorological
+Center, Beijing, 100871, China]</P>
+
+<P><B>Ramage, C. S.,</B>1971: Monsoon Meteorology, Academic Press, 296pp.</P>
+
+<P><B>Staff members,</B> Academia Sinica 1958: On the general circulation
+over eastern Asia. 2. Tellus, 10, 58-75.</P>
+
+<P><B>Zhang, Y., </B>and W.-C. Wang, 1996: GCM simulated northern winter
+cyclone and anticyclone activity under a greenhouse warming scenario. J.
+of Climate, (in revision)</P>
+
+<P><B>Zhu, Q.-G.,</B> J.-L. Lin, and S.-W. Shou, 1981: Theory and Method
+of Synoptic Meteorology. Beijing Meteorological Press, 535pp.<BR>
+
+<HR WIDTH="100%"></P>
+
+<P><A HREF="#Table_of">Return to Table of Contents<BR>
+</A><A HREF="http://www-pcmdi.llnl.gov/phillips/PCMDIreports.html">Return
+to PCMDI Reports Series Page </A>
+<HR WIDTH="100%"></P>
+
+<P>For further information about this report, please contact Yi Zhang &nbsp;<A HREF="mailto:zhang@pcmdi.llnl.gov">zhang@pcmdi.llnl.gov.</A>
+<BR>
+This site is maintained by Anna McCravy &nbsp;<A HREF="mailto:mccravy1@llnl.gov">mccravy1@llnl.gov</A>.</P>
+
+<P>Last updated November 25, 1996. </P>
+
+<P><A HREF="http://www.llnl.gov/"><IMG SRC="lll.gif" BORDER=0 HEIGHT=32 WIDTH=32></A>
+and <A HREF="http://www.llnl.gov/disclaimer.html">LLNL Disclaimers</A></P>
+
+<P>UCRL-ID-125332</P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,99 @@
+<HTML>
+<HEAD>
+<TITLE>Industrial Case-Study: A Water-jet Cutting Workcell</TITLE> 
+<BODY background="paper3.gif">
+<H1>Industrial Case-Study: A Water-jet Cutting Workcell</H1> 
+</HEAD>
+
+<H2>by John Owens (RSL) and Kevin Piatkowsky (RPT)</H2>
+
+
+<H3>Background</H3>
+
+<P>RPT is a robot systems integrator with special knowledge of Water-jet cutting applications using Fanuc robots. They use very high pressure water jets varying in pressure from 40,000 to 55,000 psi depending on the type and width of the material to be cut. The distilled water is run through three filters (10, 1, and 0.5 micron thick) to filter out any particles and then passed through flexible metal tubing along the length of the robot to a nozzle attached as a tool to the end of the robot.
+Materials that can be cut in this way include fibre-glass, headliner material, carpet, plastic (hard and soft). With the addition of an abrasive named garnet (with the texture of sand) it becomes possible to cut sheet metal or even marble: RPT have developed workcells that can cut more than 3 inches of aluminium or 2 inches of steel. Water-jet cutting is very cost-efficient in comparison to other methods such as laser-jet cutting. It is particularly suitable for cutting soft fabrics, causes no heat-stress on the part (it is its own cooling system), and the water can be easily recycled or drained straight into the sewer.</P>
+
+<H3>The Requirements</H3>
+
+<P>The pelt to be cut is 27 millimetres thick. RPT were requested to make two cuts (see figure 1). The first cut would be at a 54 degree angle to the surface.  There were additional specifications as to the length and width of the pelt, from cut line to cut line on the surface.  There was also a radius in each corner of 10 millimetres on the surface. It was required that the 54 degree cut angle be maintained throughout the radius. 
+The second cut was to be done at an 80 degree angle to the upper surface.  This cut was to be made on the already existing 'slope' of the 54 degree cut.  This would mean that the overall length and width of the part should be measured at its widest point on the 'peak' of the edges.  Again there were specified lengths and widths for this 'peak' as well as the bottom surface cut line to cut line.  Again there was a specific radius that had to maintain this 80 degree cut angle. There was also a specification that this 'peak' had to be 13 millimetres from the surface, and had to be maintained at this consistent height around the whole part, especially the corners.  Angles needed to be maintained +/- 2 degrees.  Dimensions needed to be maintained +/- 1 millimetre.</P>
+
+<center><IMG SRC="rpt1.gif" ALT="[IMAGE]"></center>
+<center>Figure 1 - The part specification</center>
+
+<H3>The Workcell</H3>
+<P>The workcell is shown in figure 2. It consists of a Fanuc S500 robot using an S3 controller and the TP robot language. Four parts are cut from one pelt before the cut parts are unloaded and the next pelt placed in the workcell.</P>
+
+<H3>The First Attempt: Manual Programming</H3>
+<P>The first attempt to solve the problem involved teaching the robot by hand using the Fanuc teach-pendant.  This required a great deal of time and patience to teach the hundreds of points required for each of the four cuts.</P>
+<P>Although the programmer could fine tune points taught by eye by entering numbers calculated using the mathematics of the part, it was still extremely difficult to ensure that the angle of the cuts was consistent.</P>
+<P>A further problem was that the cuts were not repeatable over the four parts. Because of the distortion in the robot envelope due to the geometric structure of the robot the points used to cut a part in one area of the pelt when transferred to another area of the pelt gave less consistent cuts.</P>
+<P>Water-jet cutting is a very demanding application because any deviation that the robot makes in its path, any change in velocity, any defect in the robot will show up in the final part.</P>
+<P>After about 40 hours of programming the parts being cut were still not of the quality required.</P>
+
+<H3>The Solution:Simulation,Calibration and Offline Programming using Workspace/Robotrak</H3>
+
+<P>RPT chose to use a robot simulation software package named Workspace to perform the simulation, calibration, and offline programming of the workcell. The key factors in this decision were as follows:</P>
+<P>1. Workspace is integrated with the Robotrak robot and tool calibration system. This close integration means that robot and tool calibration (for both the tool offset and orientation) is quick and effective.</P>
+<P>2. Workspace allow users to work in the robot's native language, in this case TP. This provides users with the entire power of the TP language, without the need for postprocessing of any kind. Offline programming is therefore a one-step process.</P>
+<P>3. The Workspace CAD, simulation, and offline programming system is quick and easy to use. This enabled the workcell to be designed.</P>
+<P>4. Workspace can run on any IBM-compatible PC. The cost of the hardware required for the simulation was therefore kept to a minimum, and existing PCs at present used for other purposes might be used. Workspace can also run on a notebook. This enables the engineers involved in modifications in the workcell to work on the shopfloor if required.</P>
+<P>5. Robotrak is easy to set up and use, even in a clustered workcell, since the three base units that must be placed on the floor can be placed anywhere in the workcell.</P>
+
+<H3>The Method</H3>
+<P>First one part was modelled using the Workspace CAD system as a series of closed polylines (linked arcs and lines). The geometry points required along each polyline (representing the meeting point of the water-jet and the part) were taught within Workspace along the polyline. These geometry points are like robot teachpoints except that they are stored with the model and may therefore be easily moved in the model independently of the robot.</P>
+<P>The user defined only start and end geometry points on a given line or arc - Workspace then used interpolation to automatically create intermediate geometry points along the lines or arcs at a distance between each point defined by the programmer. This technique of over defining the path (using more points than might seem necessary) ensures that the robot follows the path more precisely.</P>
+<P>The part was then copied four times and placed within the workcell. This also copies and moves the geometry points four times so that they do not need to be redefined for each part.</P>
+<P>The Fanuc S500 robot model was loaded from the robot library and placed within the workcell. If the placing of the robot was such that any of the geometry points were unachievable then the geometry points were displayed in red. The robot could then be repositioned. Figure 2 shows the Workspace model of the workcell and Figure 3 shows the geometry points defined on a part.</P>
+
+<center><IMG SRC="rpt2.gif" ALT="[IMAGE]"></center>
+<center>Figure 2 - The Workspace model of the workcell</center>
+
+<center><IMG SRC="rpt3.gif" ALT="[IMAGE]"></center>
+<center>Figure 3 - Geometry points defined on a part</center>
+
+<P>The robot programme was defined from the Workspace menus in the TP language using movements to the geometry points and the necessary motion types, motion termination types, and velocities. If movement along the path caused the robot to hit a limit on one of the wrist joints, or when moving from one cut to the next cut, then an additional move was inserted to enable the wrist to re-orientate itself (known as an air move).</P>
+<P>After the robot programme was defined from the Workspace menus then the Workspace text editor was used to inspect and comment the different parts of the programme, as well as to add commands for turning the water jet on or off.
+The next stage was to calibrate the robot and tool (see Figure 4) using Robotrak. A special fitting had been designed that screwed the robotrak cords onto the end of the water-jet. The robot was then moved to 50 teachpoints all with different positions and orientations throughout the envelope, and Workspace automatically took an xyz measurement reading from Robotrak each time the robot paused between movements.</P>
+
+<center><IMG SRC="rpt4.gif" ALT="[IMAGE]"></center>
+<center>Figure 4 - Robot and tool calibration using Robotrak</center>
+
+<P>The teachpoint file and the measurement file were then used in Workspace to instigate a search which in 1 minute found the joint angle offsets, errors in link lengths, misalignment of joint axes, tool xyz offset, and joint compliances, which together make up the signature of the robot.</P>
+<P>Two additional fittings were used to take two additional measurements using Robotrak and thereby find the true tool orientation (see Figure 5).</P>
+
+<center><IMG SRC="rpt5.gif" ALT="[IMAGE]"></center>
+<center>Figure 5 - Robotrak fittings for end of water-jet tool (from left to right): for measuring 50 points; for measuring tool z-axis, for measuring tool x-axis; for teaching points on part.</center>
+
+<P>Robotrak was then disconnected from the robot and a pointer attached to the end of the water-jet tool. This pointer was used to teach three teachpoints which just touched each of the four pelts. By taking these teachpoints back into Workspace and comparing them with the geometry points taught on the pelts it was possible to update the model for the true position of the pelts.</P>
+<P>The robot programme was then downloaded to the robot using the Workspace Send to robot command. This converts all the geometry points in the programme into teachpoints, uses the robot and tool signature to correct the accuracy of the points, merges the teachpoint file and programme file and compiles it to a binary .TP file, and then copies the file into the robot subdirectory.</P>
+
+<H3>The Results</H3>
+<P>It took about 10 hours to complete the whole simulation, calibration and offline programme the 4 parts and their programmes, compared to the 40 hours plus for the programming alone.</P>
+<P>These programmes were then applied to the robot with the calibration package, the tooling was calibrated with a tool fixture, and the first cut proved more consistently accurate in terms of cut angle and position than any manually taught programme was able to achieve.</P>
+<P>The programme created using Workspace and Robotrak ran first time on the robot controller without any modifications. No touch up was required using the teach pendant.</P>
+
+<H3>Summary</H3>
+<P>Robot simulation, calibration, and offline programming produced parts that were cut to a higher accuracy than those cut using manually taught methods. The time taken to programme an accurate path was also reduced drastically. No manual touch up of the points was required primarily because the real-world had been accurately simulated using the Workspace/Robotrak robot, tool, and model calibration methods.</P>
+
+<center><IMG SRC="line_col.gif" ALT="[IMAGE]"></img></center>
+
+
+<P ALIGN=center><A HREF="index.htm"><IMG SRC="home.gif" ALT="[IMAGE]"></a>[ <A HREF="index.htm">Return to Home Page</A> ]</P> 
+
+<center><IMG SRC="line_col.gif" ALT="[IMAGE]"></img></center>
+
+
+<center><h6><b>Workspace</b> and <b>Robotrak</b> are registered trademarks of Robot Simulations Ltd.</h6>
+
+<h6>Copyright &copy; 1996 Robot Simulations Ltd</h6>
+<h6>Last revision 3 April 1996</h6></center>
+</P>
+
+
+
+</BODY>
+
+</HTML>
+
+

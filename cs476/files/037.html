@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+<TITLE>Robotics the need for Simulation - Seeing the whole picture</TITLE> 
+<body background="paper3.gif">
+<H1>Robotics the need for Simulation - Seeing the whole picture</H1> 
+</HEAD>
+<H2>Seminar: China Productivity Centre, Taiwan</H2>
+
+<P>Whatever the application in robotics it is essential to ensure that the investment, training and operation in any factory automation project is both thoroughly researched and accurately implemented.</P>
+
+<P>With the introduction of WORKSPACE 3.0, these pre-requisites can be achieved with considerable savings to the small and medium sized customer, without sacrificing quality, but achieving economy of scale.</P>
+
+<P>We will show how the use of simulation can aid each step of the process from the development of an idea to the programming of the final choice of robot. In each instance an example from a case study will be shown from a number of applications and questions may be asked.</P>
+
+<H2>The need for Simulation</H2>
+
+<P>The techniques of computer aided design (CAD) have found extensive use in improving or replacing the process of engineering drawing, architectural drawing and many other applications. However, an engineering process involving many more moving parts can only be fully understood through the process of simulation.</P>
+
+<P>Early developments in this field have involved the computer controlled machining centres using existing CAD systems. Additional software is used to take the original CAD engineering drawing of a machined part and analyse a path across its surface. An animated simulation of the movements a machining centre must go through to create the part from a "raw" block is then displayed. As well as providing a visualisation of the process, a file can be created containing the required instructions to the machining centre. The file can then be executed to create the part.</P>
+
+<P>This extension of computer aided design to computer aided manufacture is highly applicable to industrial robotics. Simulation provides an efficient interactive graphical environment in which to improve the way industrial robots are programmed. Ever-increasing numbers of robot installations are now being planned using computer simulation. Only a few years ago the cost of technology to achieve these aims was prohibitive for all but the largest organisations. However, as with CAD before it, simulation, calibration and programming of industrial robots is possible even on a standard low-cost PC compatible computer. A software package called WORKSPACE, conceived, designed and developed by the UK company Robot Simulations Ltd., can be used to create a robot installation at a fraction of the cost of existing systems.</P>
+
+<P>This talk uses WORKSPACE as an example to show how simulation , calibration and programming can assist the implementation of an automation project.</P>
+
+<H2>Using a Robot Simulation</H2>
+
+<P>WORKSPACE was primarily intended as a visualisation aid for those engineers and managers involved in the process of designing and debugging new or existing robot installations. Benefits such as the ability to detect off-line collisions between robots and objects, and ability to evaluate and optimise the time taken for a sequence of movements off-line have proved major incentives for the investment in robot simulation.</P>
+
+<P>The core of WORKSPACE and the more expensive systems is the 3D CAD modeller. A workcell or even a full manufacturing facility containing a number of work cells can be effectively drawn on the screen, or object geometry's may be imported from a commercial CAD package ( AutoCad ) via a standard graphics Data Exchange File ( DXF ).</P>
+
+<P>The next step is to install a robot or robots into the model. A library of over 100 industrial and educational robots is available for WORKSPACE, thus allowing an engineer to experiment with different configurations in the prototype workcell by simply loading a robot from a disk. A standard robot may be selected from the library and placed in position. The user may also design their own, new robot modelling the "flesh" with the CAD system and defining the mechanical linkages. WORKSPACE then creates the kinematics model for the new robot. Operating parameters such as actual scale size, velocities, accelerations and joint limits are all simulated.</P>
+
+<P>A robot program can then be created, simulated and downloaded. Robot programmes are created by selecting the required operating language from the pull down menu system and interaction with the model using the mouse pointer. The graphical interface is considerably more intuitive than most numerically based robot operating systems. For example, it is possible to define a robot position relative to the model by pointing at a position with the mouse. The robot tool might then be automatically reorientated so that it is normal to the plain of the object face - a feature which is particularly useful in surface type applications.</P>
+
+<P>Commands are also available to carry out more complex tasks at the click of the mouse cursor. Some examples include paint spraying or applying glue evenly over a given surface , welding along seams or grasping an object. By using these commands it is possible to write a program very quickly.</P>
+
+<P>These progammes are then used firstly to move a robot in the model to produce a realistic animation, in shading of the 3D objects due to an arbitrary light source. Features such as conveyors, robots mounted on traverse units, carousels, AGV's, and machine tools may also be simulated. There is no limit to the number of programmes to be run concurrently on any number of robots or their associated machinery. The resulting command information will be combined by the software to produce one complete integrated simulation. Collision between objects in the work cell are reported as they occur, a critically important feature from the safety point of view.</P>
+
+<P>WORKSPACE calculates the time taken for each event within the model and displays the total as a "cycle time ". By rearranging the work cell or experimenting with different robots and end effectors on the simulation, this cycle time can be reduced to a minimum, thereby maximising the number of production cycles that may be achieved during a working day.</P>
+
+<P>Once the robot program has been defined and evaluated using WORKSPACE it can be down loaded direct to the robot controller without the need to use a postprocessor. Traditional methods of re-programming a robot would inevitably mean that production in that cell must stop for a considerable time. In addition, programming may have been by a teach pendant, involving an unacceptable degree of human error. By first simulating then downloading, downtime can be reduced to the time it takes to load a new program onto the controller from disk. This is one of the major benefits of robot simulation.</P>
+
+<H2>Robot Simulation: Problems and Solutions</H2>
+
+<P>The kinematics involved in robot movement is far more complex that those related to XYZ machining centres, and the relationship between the curves swept by the robot end - effector and the joint variables is not straightforward. Additionally, for a robot simulation to be of general use it must be capable of simulating a wide variety of robot types and configurations. Perhaps because of this the most beneficial simulations are not those that are originally drafted by using a CAD system with additional "robot kinematics" software but those that are specifically designed to cope with the demands of complex robot structures.</P>
+
+<P>To calculate the position of the joints required to achieve a given tool position and orientation it is necessary to use a complex mathematical algorithm. Most simulations provide algorithms for the major robot types. Unfortunately these algorithms do not always function in an identical way to those used on the robot controller ( for example, in the selection of when to point an elbow up or down, or how to deal with degenerate cases when axes are aligned ). Robot manufacturers tend to be reluctant to release information like this (if they know themselves) to a third party simulation company, even under a non-disclosure agreement. This can mean that a robot program can appear satisfactory when simulated on screen can have an occasional unforeseen change of configuration when implemented in the real world. The answer to this that any computer simulation cannot be a substitute for acting with caution the first time a robot cycle is implemented in a work cell, as safety is a primary concern.</P>
+
+<H2>"Off-line" Programming</H2>
+
+<P>WORKSPACE now provides the user with a unique facility for translating from a simulation system language to a robot language. This process is not a simple task. Usually the user would need a post processor to translate not only the simple structures such as movement commands, but also more complex structures such as condition handlers, repeat until, while do,subroutines and variables. There are very few established standards, as the robot manufacturers are fiercely loyal to their own operating systems over those of their competitors.</P>
+
+<P>WORKSPACE uses a highly sophisticated robot simulation language in order to create a compact efficient program. This language contains all the important program structures mentioned above plus a large number of functions and routines which are specific to manipulating robots. For example it is possible to perform a pick and place task by simply naming the object to be moved, specifying the position you wish to place it and calling a routine to calculate all the intermediate moves.</P>
+
+<P>WORKSPACE has a number of robot languages in a library, as with the robots, when performing the simulation and at the start of programming the correct robot language for the model is drawn from the menu and the translation is carried out simultaneously. To transfer the program files from the PC computer running the simulation to the robot controller it is necessary to use a communication link or by copying the files onto a disk compatible with the robot controller. Again, this is an area which has few standards. Even the "standard" RS232 serial port poses problems of electrical wiring and protocol methods. However, once a link has been established it is possible to receive information from the controller and translate into the simulation language without the need of a preprocessor, thus allowing the robot program to be evaluated and improved.</P>
+
+<H2>Model Accuracy</H2>
+
+<P>It must be remembered that a simulation of a robot work cell is only as accurate as the model of the workcell. Careful measurements of objects in the real world must be made, before entering the parameters to the CAD model. One way further of improving the accuracy of a simulation is to use the robot as a measuring device. A probe is attached to the robot endpoint and moved to corners of key positions in the workcell. The datum or calibration points could then be loaded into the model and used to reposition objects in the model relative to the robot.</P>
+
+<H2>Production Time</H2>
+
+<P>When planning a factory lay-out, robot simulation is only part of the story. The values for cycle times given in a workcell assumes that there are no bottlenecks elsewhere in the production process. Scheduling simulations are available to allow the whole flow of materials to be modelled, through modelling robot workcells as "black box" components. What is needed is the complete integration of scheduling and robot simulation, so that ever more accurate figures for average production time may be obtained. WORKSPACE has allowed for this in its'. "User CAll" facility.</P>
+
+<H2>Future Developments</H2>
+
+<P>Simulation has now a major impact on the type of software supplied with robots to users, with most major manufacturers taking a strong interest in marketing their own branded simulations or off-line programming systems. The graphical interface and user friendliness of WORKSPACE has highlighted the inadequacy of todays user-hostile text based robot operating systems. WORKSPACE is capable of running many different robots from different suppliers in the same workcell. It is now possible to use a graphical simulation system used as a robot operating system with a simple "point and click" selection of robot target positions. New robot tasks can be programmed in a matter of minutes instead of days or weeks.</P>
+
+<P>The promise of flexible automation is yet to be fully realised, but the expectation of the user for simulation software as reliable as the software used for word processing is the target that Robot Simulations Limited set and is achieving.</P>
+
+<H2>Glossary</H2>
+<P>Workcell - The working environment of the robot.</P>
+<P>WORKSPACE - RSL software; 3D graphical simulation and programming system.</P>
+<P>Cycle time - The time taken for a robot to go through a set series of motions that are repeated.</P>
+<P>Collision detection - The detection of collisions between objects during a computer simulation of their movements.</P>
+<P>Off-line programming - Creating and developing a robot program while isolated from the robot , so that the robot can continue to perform its current function uninterrupted.</P>
+<P>Postprocessor - Software that was previously required to translate a robot program developed off-line into the language of the robot controller. No longer needed with WORKSPACE 3.0</P>
+<P>Kinematics - The relationship between the robot joints and the movement of the robot endpoint.</P>
+<P>Dynamics - The relationship between the gravitational force on each link, the torques at each joint and the interactive forces between the robot links.</P>
+
+<H2>CASE STUDIES.</H2>
+
+<P>1. <a href="cimtasc.htm">Cimtas, Turkey</a>. Choice of robot for overhead arc welding workcell.</P>
+
+<P>2. <a href="britgas.htm">British Gas</a>. Choice of robot for long term test rig.</P>
+
+
+<P>3. <a href="plymouth.htm">University of Plymouth</a>. Use of WORKSPACE to teach degree level robotics, in depth and with safety.</P>
+
+<center><IMG SRC="line_col.gif" ALT="[IMAGE]"></img></center>
+
+
+<P ALIGN=center><A HREF="index.htm"><IMG SRC="home.gif" ALT="[IMAGE]"></a>[ <A HREF="index.htm">Return to Home Page</A> ]</P> 
+
+<center><IMG SRC="line_col.gif" ALT="[IMAGE]"></img></center>
+
+
+<center><h6><b>Workspace</b> and <b>Robotrak</b> are registered trademarks of Robot Simulations Ltd.</h6>
+
+<h6>Copyright &copy; 1996 Robot Simulations Ltd</h6>
+<h6>Last revision 3 April 1996</h6></center>
+</P>
+
+
+
+</BODY>
+
+</HTML>
+

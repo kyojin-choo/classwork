@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+<TITLE>Offline Programming and Robot Calibration - The Car Industry</TITLE> 
+</HEAD>
+<body background="paper3.gif">
+<H1>Offline Programming and Robot Calibration - The Car Industry</H1> 
+
+<P>The major users of robots have traditionally been the car companies whose product is unique in that starts as  a mass produced sheet of metal whose complexity requires intensive and advanced automation techniques with a short set-up time.</P>
+
+<P>In North America the 'big three' car makers are Chrysler, Ford, and General Motors. Based in Detroit and elsewhere in the continent these companies have spent the past five years investing heavily in robot simulation and offline programming. The urgency exerted by an unexpected demand for the most popular models as well as a large upturn in consumer spending on cars has created a pressure-cooker atmosphere in Detroit. Here production lines are designed and built and running in weeks or months and every offline programming technique is examined closely for potential improvements in set-up time or production rate.</P>
+
+<P>One of the major issues here is the move towards more and more accurate spot and arc welding techniques. The 2mm car (where every robot weld is within 2mm of the intended position on every car that rolls of the production line) is talked of as a kind of Holy Grail of car production - and some people even talk in hushed tones of eventually pushing the barrier even further to achieve the 1mm car. This has focused attention on those techniques, especially robot calibration and fixture calibration, that will lead to a higher accuracy of offline programming.</P>
+
+<P>Current practice involves several stages from simulation to offline programming. First the car is modelled in the company-wide CAD system, often a sophisticated mainframe based CAD package like CATIA which can handle models of the complete car and all the parts that make up the car. Then the fixtures are designed which are to present the parts to the welding robots in a repeatable and predictable manner.</P>
+
+<P>It is usually a requirement that the fixtures, which are created by specialist tooling companies under contract, are 'certified'. This means that points on the fixture which are to clamp the part, or the blocks against which the part are clamped, must be measured very precisely using a 3-d co-ordinate measuring device. These measurements are referred to a co-ordinate frame on the centreline of the car using three datum points on the fixture. These three datum points give the position (x, y, z,), orientation (a, b, c), and scaling factor associated with the fixture.</P>
+
+<P>The measurements are usually recorded using two manual theodolites and standard theodolite triangulation.</P>
+<P>Another alternative technique that promises even higher accuracies than those achieved using theodolites is named photogrammetry. Photogrammetry uses several very high resolution electronic 'photographs' of a target attached to the fixture taken from different angles together with standard image-processing techniques to derive the 3-d position of the target. It has a technique that has long been used in terrain mapping using aerial photography and advanced stereo vision but is only now finding an application down on the shop floor.</P>
+
+<P>The first fixture is then installed on the production line, and from this the position of the first robot is defined, again using theodolites. The position of the first fixture then defines the position of the second fixture, and so on, all the way down the production line.</P>
+
+<P>The simulation of the robot programmes has usually been completed by this stage using models imported from the CAD system and off-the-shelf robot models purchased from the simulation vendor. More and more of the simulation functionality is available on the CAD system: for example co-ordinate frames representing the position and orientation of spot-welds and approach points and 'weld-schedules' indicating the motion type and speed between points can be defined in CATIA before exporting the model to the simulation.</P>
+
+<P>The simulation is used to check that the robots can reach all the required positions. The wrist joint limits of the robot often limit the orientations that are achievable and the simulation user must work creatively to position the robot base and the robot tool. A particular position and orientation may not be achievable in a given robot configuration, for example with the wrist pointing down or with the elbow pointing up. The configuration of the robot model can be changed by driving the robot using joint motion into a different configuration before attempting the movement.</P>
+
+<P>The simulation enables the user to plan collision free paths around the clamps holding the part using via points which must be created in such a way that they do not add excessively to the overall cycle time. This is the reason that is so important to derive reasonably accurate cycle times from the simulation. Unfortunately, the robot companies consider the motion algorithms used by their robot controllers to be of such commercial value that they will always refuse to release these to the simulation vendors. A compromise position has been reached between the simulation vendors and the robot vendors (thanks to the strong encouragement of the car companies in America and in Germany) where 'black boxes' (unreadable parts of the robot controller software) are interfaced to the robot simulation to give accurate cycle times. Once the cycle times are accurate the user may also have reasonable confidence that the trajectories between points shown by the simulation are accurate, and therefore that the collision and near-miss information provided by the simulation is reliable - a key issue if simulation is to be trusted by those on the shop-floor.</P>
+
+<P>Downloading the robot programmes (sometimes called 'tracks') from the simulation to the robot controller involves taking a disc containing the programme, teachpoint, and tool frame files from the air-conditioned offices where the CAD and simulation specialist work down onto the much harsher and unforgiving environment of the factory. It is here that most advocates of simulation and offline have a rude awakening. Programmes that work fine in the 'virtual reality' environment of the robot simulation seldom work in the uncertain and unpredictable and subtly different real world.</P>
+
+<P>Robots are designed to be extremely repeatable but not all that accurate (repeatabilities of 0.1mm and accuracies of 10mm or worse are not unusual). To understand the difference between repeatability and accuracy imagine a darts game. The first player is playing with new darts and so aims for a triple 20 but instead puts all the darts in the number 6, with all three darts close together. The darts are repeatable but not very accurate. The second darts player, playing with his own tried and tested set of darts, throws three treble 20s. His darts are not only repeatable, but they are also accurate. To increase the accuracy of the robot towards the same order as its repeatability it must be calibrated. Each robot has its own individual signature created by the manufacturing tolerances involved in making robots and by the wear and tear of crashing the robot into fixtures (an all to regular occurrence) and worse. This signature can be detected by measuring the 3d co-ordinates of the robot over a range of positions and orientations throughout its envelope and then using calibration software to produce a more accurate custom model of the robot.</P>
+
+<P>The measuring devices used on the shop floor for robot calibration must be cheap and relatively easy and quick to use, since up to 50 measurements may be required for each robot. Robotrak consist of three drums which may be placed anywhere in the workcell from which three cords are extended to meet at the endpoint of the robot. The length of the cord is indicated by the rotation of the drum, and from the three lengths the x, y, z position of the endpoint of the robot may be calculated and recorded to within a repeatability of 0.3mm. If a higher accuracy is required then a laser-tracker named Smart may be used. Smart is the next generation of theodolite: it tracks targets automatically without any manual intervention. The key to Smart is a laser interferometer that measures distance very precisely so that together with the two angles representing the direction that Smart is pointing itself it is possible to calculate the x, y, z position of a point instead of having to use 2 conventional theodolites and triangulation. Smart is accurate to about 0.025mm though this degrades to 0.050mm under shop floor conditions of temperature change, vibration, and large vehicles trundling past. Robot Simulations Ltd, who offer Robotrak and Smart for use with their Workspace robot simulation, calibration, and offline programming software suggest that customers requiring accuracies circa. 1mm should use Robotrak, while customers requiring accuracies much lower than 1mm should use Smart.</P>
+
+<P>Once the robot has been calibrated it can be used with a pointer of known length as an accurate measuring device to record the position of the fixture datum points. This '3-point touch-up' is often mistaken for robot calibration, but is really only used for positioning the model of the fixture correctly relative to the robot model within the simulation and thereby avoiding one of the pitfalls of offline programming.</P>
+
+<P>Finally, the correct tool offset must be defined on the robot controller and on the robot simulation. If the dimensions of the tool are well known then this is a straightforward process, but if the tool dimensions are unknown or if the tool is slightly bent because of a collision that has occurred on the shop floor then a tool calibration must be carried out. </P>
+
+<P>The robot programme created by the simulation is really only ready for downloading to the robot once all the above procedures are complete.</P>
+
+<P>If one of these steps is ignored or badly implemented then the resulting programme can be anything from 2 inches to a foot out, depending on the seriousness of the mistakes involved. This is where most of the horror stories involving robot simulation and offline programming originate: 'we took a programme from .... and downloaded it to the robot and the robot drove straight into the fixture' or 'we created 120 offline programmes for the whole production line and not one worked first time - they all needed to be touched up by hand'.</P>
+
+<P>The final source of error in offline programming is a simple logistic one: by the time the simulation is finished and ready for offline programming the real workcell may been redesigned, turntables have been introduced or removed, additional robots have been inserted. Only now its too late to go back and simulate because the simulation office is working on simulations for the next production line. The simplest way to avoid this situation is to make certain of the following:</P>
+
+<P>1. One person is responsible for the simulation from start to finish (the finish being when the production line is up and running smoothly and there are no more changes);</P>
+
+<P>2. The simulation goes down onto the shop floor with the offline programme where last minute changes can be immediately introduced into the simulation. Microcomputer based robot simulation packages which can run on notebooks mean that nobody has an excuse for leaving the simulation up in the design office instead of taking it down onto the shop floor where it is really needed.</P>
+
+<P>So with all these potential pitfalls and inaccuracies in robot simulation and offline programming, is it really worth attempting? If you want the answer, come to Detroit. The car companies will not spend money on any technology that doesn't produce savings that can be measured in Dollars and Cents, and they see robot simulation and offline programming as the revolutionary technology that will enable them to build more cars, quicker and at a lower cost than ever before. What the Big Three are using today, the rest of us in manufacturing will be implementing tomorrow.</P>
+
+John Owens<BR>
+Technical Director<BR>
+Robot Simulations Ltd<BR>
+
+<center><IMG SRC="line_col.gif" ALT="[IMAGE]"></img></center>
+
+
+<P ALIGN=center><A HREF="index.htm"><IMG SRC="home.gif" ALT="[IMAGE]"></a>[ <A HREF="index.htm">Return to Home Page</A> ]</P> 
+
+<center><IMG SRC="line_col.gif" ALT="[IMAGE]"></img></center>
+
+
+<center><h6><b>Workspace</b> and <b>Robotrak</b> are registered trademarks of Robot Simulations Ltd.</h6>
+
+<h6>Copyright &copy; 1996 Robot Simulations Ltd</h6>
+<h6>Last revision 3 April 1996</h6></center>
+</P>
+
+
+</BODY>
+
+</HTML>
+
